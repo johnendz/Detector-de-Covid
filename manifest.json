@@ -1,0 +1,25 @@
+{
+    "description": "Detecta virus da covid-19 em suas paginas.",
+    "manifest_version": 2,
+    "name": "Detector de Covid",
+    "author": "Johnendz",
+    "version": "1.1",
+    "permissions": [
+      "tabs"
+    ],  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["script.js", "findAndReplaceDOMText.js"],
+        "run_at": "document_start"
+      }
+    ],    
+    "icons": {
+      "32": "icons/32.png",
+      "64": "icons/64.png",
+      "128": "icons/128.png"
+    },
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
